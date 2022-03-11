@@ -1,0 +1,62 @@
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalji o proizvodu</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="form-group">
+                  <label for="MarkaInput">Marka</label>
+                  <input type="marka" formControlName="marka" class="form-control" id="MarkaInput">
+                </div>
+                <div class="form-group">
+                  <label for="ModelInput">Model</label>
+                  <input type="model" formControlName="model"  class="form-control" id="ModelInput">
+                </div>
+                <div class="md-form">
+                    <label for="date-picker">Datum</label>
+                    <input placeholder="Selected date" id="date-picker" formControlName="datum"  class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="napomena">Napomena</label>
+                  <textarea formControlName="napomena"  class="form-control" id="napomena" rows="3"></textarea>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Prekini</button>
+          <button type="button" (click)="postProizvodDetails()" class="btn btn-primary">Dodaj</button>
+          <button type="button" (click)="updateProizvodDetalji()" class="btn btn-primary">Ažuriraj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Marka</th>
+            <th scope="col">Model</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Napomena</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of inventuraData">
+            <td>{{row.marka}}</td>
+            <td>{{row.model}}</td>
+            <td>{{row.datum}}</td>
+            <td>{{row.napomena}}</td>
+             <td>
+                <button (click)="onEdit(row)" class="btn btn-info" type="button" data-toggle="modal" data-target="#exampleModal">Uredi</button>
+                <button (click)="deleteProizvod(row)" class="btn btn-danger mx-3">Obriši</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+  
