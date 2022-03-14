@@ -1,5 +1,20 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 2,
+      "marka": "Hp",
+      "model": "Prof",
+      "datum": "03.01.20222",
+      "napomena": "vazno"
+    },
+    {
+      "id": 3,
+      "marka": "asd",
+      "model": "asdaasda",
+      "datum": "asd",
+      "napomena": "asd"
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"

@@ -15,6 +15,7 @@ export class DodajProizvodComponent implements OnInit {
   showAdd! : boolean;
   showUpdate!: boolean;
   constructor(private formbuilder: FormBuilder, private api: ApiService) { }
+ 
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
@@ -56,13 +57,10 @@ export class DodajProizvodComponent implements OnInit {
       this.getAllInventura();
     })
   }
-  /* clickDodajProizvod(){
-    this.formValue.reset()
-    this.showAdd = true;
-    this.showUpdate = false;
-  } */
+  
   onEdit(row: any){
-    
+    this.showAdd = false;
+    this.showUpdate = true;
     this.inventuraModelObject.id = row.id;
     this.formValue.controls['marka'].setValue(row.marka)
     this.formValue.controls['model'].setValue(row.model)
