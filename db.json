@@ -8,14 +8,14 @@
       "napomena": "vazno"
     },
     {
-      "id": 3,
-      "marka": "asd",
-      "model": "asdaasda",
-      "datum": "asd",
-      "napomena": "asd"
+      "id": 4,
+      "marka": "asdfdf",
+      "model": "435",
+      "datum": "234234",
+      "napomena": "adsadas"
     }
   ],
-  "comments": [],
+  "prijavljeniKorisnici": [],
   "profile": {
     "name": "typicode"
   }

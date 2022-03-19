@@ -7,6 +7,8 @@ import { TablesComponent } from './tables/tables.component';
 import { DodajProizvodComponent } from './dodaj-proizvod/dodaj-proizvod.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -15,7 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     InventuraDashboardComponent,
     TablesComponent,
-    DodajProizvodComponent
+    DodajProizvodComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
