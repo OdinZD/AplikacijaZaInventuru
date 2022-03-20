@@ -6,7 +6,7 @@
                     <h1>Prijavite se</h1>
                     <h6>Registracija korisnika</h6>
                 </div>
-                <form {formGroup}="signupForm">
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
                     <div class="mb-3">
                         <label for="unesiImeIPrezime" class="form-label">Vaše ime i prezime</label>
                         <input formControlName="unesiImeIPrezime" type="text" class="form-control" id="unesiImeIPrezime">
@@ -20,8 +20,7 @@
                         <input formControlName="unesiSifru" type="password" class="form-control" id="unesiSifru">
                       </div>
                       <button type="submit" class="btn btn-primary mb-2">Registracija</button>
-                </form>
-                <a routerLink="/login" >Postojeći korisnik</a>
+                </form>routerLink="/login" >Postojeći korisnik</a>
             </div>
         </div>
     </div>
