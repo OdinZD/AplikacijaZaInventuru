@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +11,7 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   public signupForm !: FormGroup;
-  constructor(private formBuilder : FormBuilder) { }
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) { }
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
@@ -19,7 +21,14 @@ export class SignupComponent implements OnInit {
     })
   }
   signUp(){
-
+this.http.post<any>("http://localhost:3000/prijavljeniKorisnici",this.signupForm.value)
+.subscribe(res =>{
+  alert("Uspiješno ste prijavljeni");
+  this.signupForm.reset()
+  this.router.navigate(['login'])
+}, err =>{
+  alert('Dogodila se greška!')
+})
   }
 
 }

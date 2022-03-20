@@ -15,7 +15,14 @@
       "napomena": "adsadas"
     }
   ],
-  "prijavljeniKorisnici": [],
+  "prijavljeniKorisnici": [
+    {
+      "unesiImeIPrezime": "Odin",
+      "unesiEmail": "odin.perica@gmail.com",
+      "unesiSifru": "nesto",
+      "id": 1
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
